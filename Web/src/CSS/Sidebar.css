@@ -1,0 +1,54 @@
+#sidebar-items h2 {
+    margin: 0 0 .5rem 0;
+}
+
+#logout_button .container-text button {
+    color: red;
+}
+
+#logout_button .container-text:hover {
+    color: white;
+    background-color: red;
+}
+
+#sidebar-items .container-text button {
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+#sidebar-items .container-text a,
+#sidebar-items .container-text button {
+    justify-content: space-between;
+    padding: 5px 8px 5px 3px;
+    width: 250px;
+}
+
+#sidebar-items .container-text a:hover,
+#sidebar-items .container-text button:hover {
+    color: white;
+    padding: 5px 8px;
+}
+
+#sidebar-items .container-text i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#sidebar-items .container-text:hover i {
+    opacity: 1;
+}
+
+#sidebar-items .active {
+    background-color: var(--color-secondary-background);
+    color: white;
+}
+
+#sidebar-items .active a {
+    padding: 5px 8px;
+}
+
+#sidebar-items .active i {
+    opacity: 1;
+}
