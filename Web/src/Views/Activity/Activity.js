@@ -19,6 +19,7 @@ function Activity() {
                 <div className="container column" style={{height: '100%'}}>
                     <AddActivity type="Revision" description="Website Revision completed." timestamp="2022-01-01 12:00" />
                     <AddActivity type="Development" description="Website Development started." timestamp="2022-01-01 12:00" />
+                    <AddActivity type="Design" description="Website Design started." timestamp="2022-01-01 12:00" />
                 </div>
             </div>
         </div>
