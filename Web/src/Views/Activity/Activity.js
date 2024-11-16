@@ -30,8 +30,6 @@ function Activity() {
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
-                    <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
-
                 </div>
             </div>
         </div>
