@@ -2,7 +2,7 @@ function AddActivity(props) {
     return (
         <div className="container row">
             <h4 style={{ color: 'rgb(200,200,200)', fontSize: '0.9rem', width: '8%', marginTop: '.5rem' }}>{props.timestamp}</h4>
-            <div style={{width: '92%'}} className="container container-inside column background-secondary">
+            <div style={{width: '92%'}} className="container container-inside column background-secondary container-text">
                 <h3>{props.type}</h3>
                 <p>{props.description}</p>
             </div>
@@ -13,7 +13,7 @@ function AddActivity(props) {
 function Activity() {
     return (
         <div className="container container-inside no-select" style={{height: '100%'}}>
-            <div className="background container-box-shadow container-inside" style={{maxHeight: '100%', overflowY: 'scroll', boxSizing: 'border-box'}}>
+            <div className="background container-box-shadow container-inside" style={{maxHeight: '100%', overflowY: 'auto', boxSizing: 'border-box'}}>
                 <h2>Activity Log</h2>
                 <hr />
                 <div className="container column" style={{height: '100%'}}>
@@ -31,7 +31,6 @@ function Activity() {
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
                     <AddActivity type="New Order" description="New order placed for Desktop App Development." timestamp="2022-01-01 12:00" />
-
                 </div>
             </div>
         </div>

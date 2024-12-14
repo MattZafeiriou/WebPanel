@@ -118,8 +118,18 @@ input {
       );
 }
 
+.background-dark-disabled {
+    background-color: rgb(50, 50, 50) !important;
+    color: rgb(100, 100, 100) !important;
+}
+
 .background-dark {
     background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.background-secondary-disabled {
+    background-color: rgba(80, 80, 80, .3) !important;
     color: white;
 }
 

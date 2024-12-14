@@ -5,6 +5,7 @@ import ServicesDetails from './Services/Details/ServicesDetails';
 import NewOrder from './NewOrder/NewOrder';
 import DesktopAppDevelopment from './NewOrder/DesktopAppDevelopment/DesktopAppDevelopment';
 import Activity from './Activity/Activity';
+import Payments from './Payments/Payments';
 import '../CSS/App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/services' element={<Services />} />
                 <Route path='/services/*' element={<ServicesDetails />} />
                 <Route path='/activity' element={<Activity />} />
+                <Route path='/payments' element={<Payments />} />
             </Routes>
             </div>
             </div>
