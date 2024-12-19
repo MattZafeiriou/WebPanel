@@ -10,7 +10,10 @@ function BoxContainer(props) {
                         return <button key={index} id={button.id} className={button.className} onClick={
                             () => {
                                 if (button.href) {
-                                    window.location.href = button.href;
+                                    if (button.external)
+                                        window.open(button.href, '_blank');
+                                    else
+                                        window.location.href = button.href;
                                 }
                             }
                         }>{button.text}</button>

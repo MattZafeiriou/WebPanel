@@ -15,11 +15,6 @@ function Sidebar() {
         serviceName = location.pathname.split('/')[2];
 
     useEffect(() => {
-        console.log('bruh')
-        document.getElementById('logout-button').addEventListener('click', () => {
-            fetch('http://localhost:8000');
-        });
-
         const pathname = window.location.pathname;
         let id = pathname.replaceAll('/', '-');
         if (id.at(-1) === '-')
@@ -52,17 +47,16 @@ function Sidebar() {
                             <h2 className='container-text' id="sidebar-services-reports"><a href={`/services/${serviceName}/reports`} className='row'>Reports<i className="fa-solid fa-chart-bar"></i></a></h2>
                         </> :
                         <>
-                            <h2 className='container-text' id="sidebar-services"><a href="/services" className='row'>My Services<i className="fa-solid fa-cog"></i></a></h2>
+                            <h2 className='container-text' id="sidebar-services"><a href="/services" className='row'>Services<i className="fa-solid fa-cog"></i></a></h2>
                             <h2 className='container-text' id="sidebar-activity"><a href="/activity" className='row'>Activity Log<i className="fa-solid fa-clipboard-list"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-payments"><a href="/payments" className='row'>Payments<i className="fa-solid fa-money-bill"></i></a></h2>
+                            <h2 className='container-text' id="sidebar-payments"><a href="/payments" className='row'>Invoices<i className="fa-solid fa-money-bill"></i></a></h2>
                             <h2 className='container-text' id="sidebar-chathub"><a href="/chathub" className='row'>Chat Hub<i className="fa-solid fa-comment"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-new-order"><a href="/new-order" className='row'>New Order<i className="fa-solid fa-plus"></i></a></h2>
                         </>
                     }
                 </div>
-                <div className='container-section' id="logout_button">
+                <div className='container-section'>
                     <hr />
-                    <h2 className='container-text' style={{ marginBottom: '-0.5rem' }}><button className='row' id="logout-button">Logout<i className="fa-solid fa-right-from-bracket"></i></button></h2>
+                    <h2 className='container-text' id="sidebar-settings"><a href="/settings" className='row'>Settings<i className="fa-solid fa-right-from-bracket"></i></a></h2>
                 </div>
             </div>
         </div>

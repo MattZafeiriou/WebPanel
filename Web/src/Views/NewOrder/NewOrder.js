@@ -16,6 +16,7 @@ function newOrder() {
                 text: 'Place Order',
                 href: '/new-order/website',
                 className: 'button-text',
+                external: false
             }
         ]
     };
@@ -31,6 +32,7 @@ function newOrder() {
                 text: 'Place Order',
                 href: '/new-order/desktop-app',
                 className: 'button-text',
+                external: false
             }
         ]
     };
@@ -46,6 +48,7 @@ function newOrder() {
                 text: 'Place Order',
                 href: '/new-order/mobile-app',
                 className: 'button-text',
+                external: false
             }
         ]
     };

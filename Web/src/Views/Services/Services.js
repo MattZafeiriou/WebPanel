@@ -19,11 +19,13 @@ function Services() {
                 text: 'Open Service',
                 href: '/services/service1',
                 className: 'button-text',
+                external: false
             },
             {
                 text: 'Open Website',
                 href: 'https://www.google.com',
                 className: 'button-text button-danger',
+                external: true
             }
         ]
     };

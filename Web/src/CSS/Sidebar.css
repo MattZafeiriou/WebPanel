@@ -2,15 +2,6 @@
     margin: 0 0 .5rem 0;
 }
 
-#logout_button .container-text button {
-    color: red;
-}
-
-#logout_button .container-text:hover {
-    color: white;
-    background-color: red;
-}
-
 #sidebar-items .container-text button {
     background-color: transparent;
     font-size: 1.5rem;
