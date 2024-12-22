@@ -19,8 +19,8 @@ function AddTask(props) {
   return (
     <div className="container row">
       <div className="flex column" style={{ width: '8%' }}>
-        <h4 style={{ color: 'rgb(200,200,200)', fontSize: '0.9rem', marginTop: '.5rem' }}>{props.deadline}</h4>
-        <h4 style={{ color: color, fontSize: '1.2rem', fontWeight: '600' }}>{text}</h4>
+      <h4 style={{ color: color, fontSize: '1.2rem', fontWeight: '600' }}>{text}</h4>
+      <h4 style={{ color: 'rgb(200,200,200)', fontSize: '0.9rem', marginTop: '.5rem' }}>{props.deadline}</h4>
       </div>
       <div style={{ width: '100%' }} className={"container container-inside row " + ((props.status === 'Done') ? "background-secondary-disabled" : "background-secondary") + " container-text"}>
         <div className="container column" style={{ width: '100%' }}>

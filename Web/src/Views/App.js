@@ -11,14 +11,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className='main-page'>
+    <div className='flex flex-row'>
       <BrowserRouter>
         <Sidebar />
-        <div className='content background-stripes'>
-          <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <div className='w-full'>
+          <div className='pattern-opacity-100'>
             <Topbar />
-            <div style={{ maxHeight: 'calc(100% - 4rem)', boxSizing: 'border-box' }}>
-            <Routes>
+            <div className='p-2' style={{ maxHeight: 'calc(100% - 4rem)', boxSizing: 'border-box' }}>
+              <Routes>
                 <Route path='/' element={<h1>Home</h1>} />
                 <Route path='/new-order' element={<NewOrder />} />
                 <Route path='/new-order/desktop-app' element={<DesktopAppDevelopment />} />
@@ -26,9 +26,9 @@ function App() {
                 <Route path='/services/*' element={<ServicesDetails />} />
                 <Route path='/activity' element={<Activity />} />
                 <Route path='/payments' element={<Payments />} />
-            </Routes>
+              </Routes>
             </div>
-            </div>
+          </div>
         </div>
       </BrowserRouter>
     </div>

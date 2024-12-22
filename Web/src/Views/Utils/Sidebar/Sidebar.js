@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, matchPath } from 'react-router-dom';
-import '../../../CSS/Sidebar.css';
+//import '../../../CSS/Sidebar.css';
 
 function Sidebar() {
 
@@ -30,33 +30,43 @@ function Sidebar() {
         }
     });
 
+    function SidebarItem(props) {
+        return (
+            <h2 id={props.id} className='ease-linear duration-100 hover:bg-purple-950 py-1 px-2 m-1 rounded text-xl'>
+                <a href={props.href} className='flex flex-row w-full justify-between items-center group relative'>
+                    {props.name}<i className={`fa-solid fa-${props.icon} opacity-0 group-hover:opacity-100 transition-opacity`}></i>
+                </a>
+            </h2>
+        );
+    }
+
     return (
-        <div className='container container-inside background container-box-shadow column no-select' style={{ width: '300px', height: '100vh', gap: '0' }}>
-            <h1><a href="/">Web Panel</a></h1>
+        <div className='h-screen bg-neutral-900 text-white container-box-shadow flex flex-col w-60'>
+            <h1 className='font-semibold text-2xl py-3 mx-2'><a href="/">Web Panel</a></h1>
             <hr />
-            <div className='container-box column' id="sidebar-items" style={{ justifyContent: 'space-between', height: '100%' }}>
+            <div className='flex-col flex justify-between h-full ' id="sidebar-items">
                 <div className='container-section'>
                     {isServicesSubpath ?
                         <>
-                            <h2 className='container-text' id="sidebar-services-details"><a href={`/services/${serviceName}`} className='row'>Details<i style={{marginRight: '.3rem'}} className="fa-solid fa-info"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-tasks"><a href={`/services/${serviceName}/tasks`} className='row'>Tasks<i className="fa-solid fa-tasks"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-revisions"><a href={`/services/${serviceName}/revisions`} className='row'>Revisions<i className="fa-solid fa-history"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-invoices"><a href={`/services/${serviceName}/invoices`} className='row'>Invoices<i className="fa-solid fa-file-invoice"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-milestones"><a href={`/services/${serviceName}/milestones`} className='row'>Milestones<i className="fa-solid fa-flag"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-notes"><a href={`/services/${serviceName}/notes`} className='row'>Notes<i className="fa-solid fa-sticky-note"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-services-reports"><a href={`/services/${serviceName}/reports`} className='row'>Reports<i className="fa-solid fa-chart-bar"></i></a></h2>
+                            <SidebarItem id='sidebar-services-details' name='Details' icon='info' href={`/services/${serviceName}`} />
+                            <SidebarItem id='sidebar-services-tasks' name='Tasks' icon='tasks' href={`/services/${serviceName}/tasks`} />
+                            <SidebarItem id='sidebar-services-revisions' name='Revisions' icon='history' href={`/services/${serviceName}/revisions`} />
+                            <SidebarItem id='sidebar-services-invoices' name='Invoices' icon='file-invoice' href={`/services/${serviceName}/invoices`} />
+                            <SidebarItem id='sidebar-services-milestones' name='Milestones' icon='flag' href={`/services/${serviceName}/milestones`} />
+                            <SidebarItem id='sidebar-services-notes' name='Notes' icon='sticky-note' href={`/services/${serviceName}/notes`} />
+                            <SidebarItem id='sidebar-services-reports' name='Reports' icon='chart-bar' href={`/services/${serviceName}/reports`} />
                         </> :
                         <>
-                            <h2 className='container-text' id="sidebar-services"><a href="/services" className='row'>Services<i className="fa-solid fa-cog"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-activity"><a href="/activity" className='row'>Activity Log<i className="fa-solid fa-clipboard-list"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-payments"><a href="/payments" className='row'>Invoices<i className="fa-solid fa-money-bill"></i></a></h2>
-                            <h2 className='container-text' id="sidebar-chathub"><a href="/chathub" className='row'>Chat Hub<i className="fa-solid fa-comment"></i></a></h2>
+                            <SidebarItem id='sidebar-services' name='Services' icon='tasks' href='/services' />
+                            <SidebarItem id='sidebar-activity' name='Activity Log' icon='clipboard-list' href='/activity' />
+                            <SidebarItem id='sidebar-payments' name='Invoices' icon='money-bill' href='/payments' />
+                            <SidebarItem id='sidebar-chathub' name='Chat Hub' icon='comment' href='/chathub' />
                         </>
                     }
                 </div>
                 <div className='container-section'>
                     <hr />
-                    <h2 className='container-text' id="sidebar-settings"><a href="/settings" className='row'>Settings<i className="fa-solid fa-right-from-bracket"></i></a></h2>
+                    <SidebarItem id='sidebar-settings' name='Settings' icon='cog' href='/settings' />
                 </div>
             </div>
         </div>
