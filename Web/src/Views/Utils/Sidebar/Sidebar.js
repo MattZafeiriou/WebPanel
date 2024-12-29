@@ -32,9 +32,9 @@ function Sidebar() {
 
     function SidebarItem(props) {
         return (
-            <h2 id={props.id} className='ease-linear duration-100 hover:bg-purple-950 py-1 px-2 m-1 rounded text-xl'>
+            <h2 id={props.id} className='ease-linear duration-100 hover:bg-purple-950 py-0.5 px-2 m-1 rounded text-xl'>
                 <a href={props.href} className='flex flex-row w-full justify-between items-center group relative'>
-                    {props.name}<i className={`fa-solid fa-${props.icon} opacity-0 group-hover:opacity-100 transition-opacity`}></i>
+                    <span className='mb-1'>{props.name}</span><i className={`fa-solid fa-${props.icon} opacity-0 group-hover:opacity-100 transition-opacity`}></i>
                 </a>
             </h2>
         );

@@ -1,13 +1,13 @@
 function BoxContainer(props) {
     return (
-        <div className="container-inside container-box-shadow background no-select" style={props.style}>
+        <div className="select-none bg-neutral-900 p-3 box-border flex flex-col" style={props.style}>
             <h3><a href={props.href}>{props.title}</a></h3>
             <hr />
-            <div>
-                <div style={{ color: 'rgb(220,220,220)' }}>{props.details}</div>
-                <div className="container row">
+            <div className="flex flex-col justify-between h-full box-border pt-1">
+                <div className="text-neutral-300">{props.details}</div>
+                <div className="flex flex-row gap-2 justify-end pt-2">
                     {props.buttons ? props.buttons.map((button, index) => {
-                        return <button key={index} id={button.id} className={button.className} onClick={
+                        return <button key={index} id={button.id} className={`${button.className} btn`} onClick={
                             () => {
                                 if (button.href) {
                                     if (button.external)

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+    @apply text-white font-bold py-1.5 px-2 rounded;
+}
+
+.btn-primary {
+    @apply bg-emerald-500;
+}
+
+.btn-primary:hover {
+    @apply bg-emerald-600;
+}
+
+.btn-secondary {
+    @apply bg-gray-500;
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-600;
+}
+
+.btn-danger {
+    @apply bg-red-500;
+}
+
+.btn-danger:hover {
+    @apply bg-red-600;
+}
